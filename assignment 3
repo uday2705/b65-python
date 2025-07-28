@@ -1,0 +1,152 @@
+# Assignment 1: Calculator
+
+# Calculator
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+op = input("Enter operation (+, -, *, /): ")
+
+if op == '+':
+    result = num1 + num2
+elif op == '-':
+    result = num1 - num2
+elif op == '*':
+    result = num1 * num2
+elif op == '/':
+    if num2 != 0:
+        result = num1 / num2
+    else:
+        result = "Error! Division by zero."
+else:
+    result = "Invalid operator"
+
+print("Result:", result)
+# Assignment 2: Comparison Practice
+
+# Comparison Practice
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+print("a == b:", a == b)
+print("a != b:", a != b)
+print("a > b:", a > b)
+print("a < b:", a < b)
+print("a >= b:", a >= b)
+print("a <= b:", a <= b)
+
+
+# Assignment 3: Logical Test
+
+# Logical Test
+age = int(input("Enter your age: "))
+country = input("Enter your country: ")
+
+if age > 18 and country.lower() == "india":
+    print("You are eligible.")
+else:
+    print("You are not eligible.")
+
+# Assignment 4: Membership Game
+
+# Membership Game
+favorite_colors = ["red", "blue", "green", "yellow", "purple"]
+
+user_color = input("Enter your favorite color: ").lower()
+
+if user_color in favorite_colors:
+    print(f"{user_color} is in the favorite color list!")
+else:
+    print(f"{user_color} is NOT in the favorite color lis 
+
+
+
+# Assignment 5: Bitwise Fun
+
+# Bitwise operations on small numbers
+a = 5
+b = 3
+
+print("Binary of a:", bin(a))
+print("Binary of b:", bin(b))
+
+print("a & b:", a & b)
+print("a | b:", a | b)
+print("a ^ b:", a ^ b)
+print("~a:", ~a)
+print("a << 1:", a << 1)
+print("b >> 1:", b >> 1)
+
+# Assignment 6: Even or Odd Check
+
+# Even or Odd Check
+num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+    print("The number is Even.")
+else:
+    print("The number is Odd.")
+
+# Assignment 7: Swap Two Variables (No Third Variable)
+
+# Swap two variables using arithmetic operators
+a = int(input("Enter value for a: "))
+b = int(input("Enter value for b: "))
+
+a = a + b
+b = a - b
+a = a - b
+
+print("After swapping:")
+print("a =", a)
+print("b =", b)
+
+
+#Assignment 8: Voter Eligibility Checker
+
+# Voter eligibility checker
+age = int(input("Enter your age: "))
+citizen = input("Are you a citizen? (yes/no): ").lower()
+
+if age >= 18 and citizen == "yes":
+    print("You are eligible to vote.")
+else:
+    print("You are not eligible to vote.")
+
+
+# Assignment 9: Identity and Equality Operator
+
+# Create two lists with the same values
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+list3 = list1  # Same object reference
+
+# Equality check
+print("list1 == list2:", list1 == list2)  # True (values are same)
+print("list1 is list2:", list1 is list2)  # False (different objects)
+print("list1 is list3:", list1 is list3)  # True (same object)
+
+# Explanation
+print("id(list1):", id(list1))
+print("id(list2):", id(list2))
+print("id(list3):", id(list3))
+
+
+# Assignment 10: All Assignment Operators Practice
+
+# Start with a number
+x = 10
+print("Initial x:", x)
+
+x += 5
+print("After x += 5:", x)
+
+x -= 3
+print("After x -= 3:", x)
+
+x *= 2
+print("After x *= 2:", x)
+
+x /= 4
+print("After x /= 4:", x)
+
+x %= 3
+print("After x %= 3:", x)
