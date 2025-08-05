@@ -1,0 +1,52 @@
+#Contact Form with Optional Fields
+
+def submit_form(name, email, phone=None):
+    print("Name:", name)
+    print("Email:", email)
+    if phone:
+        print("Phone:", phone)
+    else:
+        print("Phone: Not provided")
+
+# Example call
+submit_form("Udayraj", "uday@example.com", "9876543210")
+
+# Shopping Cart Total with args
+
+def calculate_total(*prices):
+    total = sum(prices)
+    return total
+
+# Example call
+print("Total:", calculate_total(100, 200, 50))
+
+
+#Display Book Info with kwargs
+
+def book_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key.capitalize()}: {value}")
+
+# Example call
+book_info(title="Python Programming", author="John Doe", price=499)
+
+
+#Multi-Item Billing
+
+def print_bill(*items):
+    total = sum(items)
+    print("Item prices:", items)
+    print("Total Bill:", total)
+
+# Example call
+print_bill(120, 230, 150)
+
+#User Settings Handler
+
+def save_settings(**options):
+    print("User Settings:")
+    for key, value in options.items():
+        print(f"{key.capitalize()}: {value}")
+
+# Example call
+save_settings(theme="dark", language="English", notifications="On")
