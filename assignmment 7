@@ -1,0 +1,72 @@
+# Loop through a Tuple
+Task: Create a tuple of 5 favorite movies and print each one using a loop.
+favorite_movies = ("Inception", "The Matrix", "Interstellar", "Parasite", "The Dark Knight")
+
+for movie in favorite_movies:
+    print(movie)
+# Use enumerate() with a List
+Task: Create a list of fruits and print each fruit with its index.
+fruits = ["Apple", "Banana", "Cherry", "Mango", "Grapes"]
+
+for index, fruit in enumerate(fruits):
+    print(f"{index}: {fruit}")
+#Use .items() on a Dictionary
+Task: Create a dictionary of 3 students and their grades. Print in “Student: Grade” format.
+grades = {"Alice": "A", "Bob": "B+", "Charlie": "A-"}
+
+for student, grade in grades.items():
+    print(f"{student}: {grade}")
+
+# on a Dictionary
+Task: Create a dictionary with countries as keys and capitals as values. Print only the capitals.
+countries = {"India": "New Delhi", "France": "Paris", "Japan": "Tokyo"}
+
+for capital in countries.values():
+    print(capital)
+
+#Loop through a Set
+Task: Create a set of animal names and print each one.
+animals = {"Dog", "Cat", "Elephant", "Tiger", "Zebra"}
+
+for animal in animals:
+    print(animal)
+
+
+# Loop Through Dictionary Keys Only
+Task: Create a dictionary of products and their prices. Print only the product names.
+products = {"Pen": 10, "Notebook": 40, "Eraser": 5}
+
+for product in products:
+    print(product)
+
+#Loop with range() to Generate Even Numbers
+Task: Print the first 10 even numbers using a loop and range
+for num in range(2, 21, 2):
+    print(num)
+
+
+#Loop Through Nested Dictionary
+Task: Print each student's name and grade from a nested dictionary.
+students = {
+    "Amit": {"age": 20, "grade": "A"},
+    "Riya": {"age": 21, "grade": "B+"},
+    "Kunal": {"age": 22, "grade": "A-"}
+}
+
+for name, info in students.items():
+    print(f"{name}: {info['grade']}")
+
+
+#Loop Through a String
+Task: Take a user input string and print each character on a new line.
+user_input = input("Enter a string: ")
+for char in user_input:
+    print(char)
+
+# Use enumerate() to Build a Menu
+Task: Display a menu of food items with numbering for user selection.
+menu = ["Pizza", "Burger", "Pasta", "Salad"]
+
+print("Menu:")
+for index, item in enumerate(menu, start=1):
+    print(f"{index}. {item}")
