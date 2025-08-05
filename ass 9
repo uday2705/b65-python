@@ -1,0 +1,53 @@
+#User Names
+
+usernames = ['john', 'alice', 'bob']
+capitalized = list(map(lambda name: name.capitalize(), usernames))
+print(capitalized)
+# Output: ['John', 'Alice', 'Bob']
+
+
+#Filter Valid Email Addresses
+
+emails = ['abc@gmail.com', 'xyz@yahoo.com', 'admin@gmail.com']
+valid_emails = list(filter(lambda email: email.endswith('@gmail.com'), emails))
+print(valid_emails)
+# Output: ['abc@gmail.com', 'admin@gmail.com']
+
+
+#Calculate Final Prices After Discount
+
+prices = [100, 200, 300]
+discounted = list(map(lambda p: p * 0.9, prices))
+print(discounted)
+# Output: [90.0, 180.0, 270.0]
+# Get Full Names of Employees
+
+employees = [('John', 'Doe'), ('Alice', 'Smith')]
+full_names = list(map(lambda emp: emp[0] + ' ' + emp[1], employees))
+print(full_names)
+# Output: ['John Doe', 'Alice Smith']
+
+#Find Products Above ₹1000
+
+prices = [850, 1200, 999, 1600]
+above_1000 = list(filter(lambda p: p > 1000, prices))
+print(above_1000)
+# Output: [1200, 1600]
+
+
+#Find Total Marks of a Student
+
+from functools import reduce
+
+marks = [78, 85, 90, 88]
+total = reduce(lambda x, y: x + y, marks)
+print(total)
+# Output: 341
+
+
+#Sort List of Students by Age
+
+students = [{'name': 'Meera', 'age': 22}, {'name': 'Radha', 'age': 20}]
+sorted_students = sorted(students, key=lambda x: x['age'])
+print(sorted_students)
+# Output: [{'name': 'Radha', 'age': 20}, {'name': 'Meera', 'age': 22}]
