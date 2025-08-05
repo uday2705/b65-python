@@ -1,0 +1,62 @@
+#Greet the teacher by name
+
+def greet_teacher(name):
+    print(f"Hello, {name}! Welcome to the class.")
+
+
+# Multiply two numbers
+
+def multiply(a, b):
+    return a * b
+
+
+#Calculate total price after tax
+
+def total_price_after_tax(price, tax_percent):
+    tax = (price * tax_percent) / 100
+    return price + tax
+
+# Print employee details (name, position, salary)
+
+def print_employee_details(name, position, salary):
+    print(f"Name: {name}")
+    print(f"Position: {position}")
+    print(f"Salary: ₹{salary}")
+
+# Convert Celsius to Fahrenheit
+
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+
+# Return the square of a number
+
+def square(number):
+    return number ** 2
+
+
+# Calculate simple interest
+
+def simple_interest(principal, rate, time):
+    return (principal * rate * time) / 100
+
+
+#Print birthday message with name and age
+
+def birthday_message(name, age):
+    print(f"Happy {age}th Birthday, {name}!")
+
+# Split bill among friends
+
+def split_bill(total_amount, number_of_friends):
+    if number_of_friends == 0:
+        return "Cannot divide by zero."
+    return total_amount / number_of_friends
+
+
+#Convert hours into minutes and seconds
+
+def convert_hours(hours):
+    minutes = hours * 60
+    seconds = hours * 3600
+    return minutes, seconds
