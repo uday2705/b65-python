@@ -1,0 +1,112 @@
+Assignment 1: Playlist Manager
+
+# Create a list of 5 song names
+playlist = ["Song A", "Song B", "Song C", "Song D", "Song E"]
+
+# Add 2 more songs using append()
+playlist.append("Song F")
+playlist.append("Song G")
+
+# Insert one song at the 2nd position
+playlist.insert(1, "Song H")
+
+# Remove a song using remove()
+playlist.remove("Song C")
+
+# Reverse the playlist
+playlist.reverse()
+
+print("Final Playlist:", playlist)
+
+
+Assignment 2: Exam Scores
+
+# Create a list of 7 exam scores
+scores = [85, 67, 90, 45, 78, 92, 81]
+
+# Sort ascending
+print("Ascending:", sorted(scores))
+
+# Sort descending
+print("Descending:", sorted(scores, reverse=True))
+
+# Count how many students scored above 80
+count = sum(1 for s in scores if s > 80)
+print("Students scored above 80:", count)
+
+Assignment 3: Travel Destinations
+
+# Create a tuple of 5 countries
+destinations = ("Japan", "Italy", "France", "Canada", "Australia")
+
+# Try changing one value (will give error)
+# destinations[1] = "Spain"  # ❌ Tuples are immutable
+
+# Unpack them into separate variables
+a, b, c, d, e = destinations
+print(a, b, c, d, e)
+
+
+Assignment 4: Employee Names
+
+# Create a list of employee names
+employees = ["Alice", "Bob", "Charlie"]
+
+# Add 3 more employees using extend()
+employees.extend(["David", "Eve", "Frank"])
+
+# Find index of a particular employee
+print("Index of Eve:", employees.index("Eve"))
+
+# Remove an employee using pop()
+removed = employees.pop(2)  # removes Charlie
+print("Removed:", removed)
+print("Employees:", employees)
+
+Assignment 5: Product Prices
+
+# Create a list of 6 product prices
+prices = [120, 340, 560, 220, 150, 90]
+
+# Find highest, lowest, average
+print("Highest:", max(prices))
+print("Lowest:", min(prices))
+print("Average:", sum(prices) / len(prices))
+
+# Clear the list after printing
+prices.clear()
+print("Cleared list:", prices)
+
+
+Assignment 6: Weekly Temperatures
+
+# Create a tuple for 7 days
+temps = (30, 32, 29, 35, 33, 31, 28)
+
+# Slice to get weekend temperatures (last 2 days)
+weekend = temps[5:]
+print("Weekend:", weekend)
+
+# Check if a specific temp exists
+print("Is 35°C in tuple?", 35 in temps)
+
+
+Assignment 7: Shopping Cart
+
+# Create a list of 5 items
+cart = ["Milk", "Bread", "Eggs", "Butter", "Cheese"]
+
+# Add 3 more items using extend()
+cart.extend(["Juice", "Apples", "Rice"])
+
+# Sort alphabetically
+cart.sort()
+print("Sorted Cart:", cart)
+
+# Make a copy and clear original
+cart_copy = cart.copy()
+cart.clear()
+print("Copied Cart:", cart_copy)
+print("Original after clearing:", cart)
+
+
