@@ -1,0 +1,144 @@
+ Assignment 1: Set Operations
+
+# Create two sets of student roll numbers
+set1 = {101, 102, 103, 104, 105}
+set2 = {104, 105, 106, 107}
+
+# 1. Students in both sets
+print("Students in both sets:", set1 & set2)
+
+# 2. Students only in set1
+print("Students only in set1:", set1 - set2)
+
+# 3. All unique students
+print("All unique students:", set1 | set2)
+
+ Assignment 2: Dictionary Phonebook
+
+# Create phonebook dictionary
+phonebook = {}
+
+# Add contacts
+phonebook["Rahul"] = "9876543210"
+phonebook["Priya"] = "9123456780"
+phonebook["Amit"] = "9988776655"
+
+# Update contact
+phonebook["Priya"] = "9000000000"
+
+# Delete contact
+del phonebook["Amit"]
+
+# Search contact
+name = "Rahul"
+if name in phonebook:
+    print(f"{name}'s number is {phonebook[name]}")
+else:
+    print(f"{name} not found")
+
+ Assignment 3: Calculator with Dictionary
+
+# Calculator using dictionary
+def add(a, b): return a + b
+def sub(a, b): return a - b
+def mul(a, b): return a * b
+def div(a, b): return a / b if b != 0 else "Division by zero!"
+
+operations = {
+    "add": add,
+    "sub": sub,
+    "mul": mul,
+    "div": div
+}
+
+op = input("Enter operation (add, sub, mul, div): ")
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if op in operations:
+    print("Result:", operations[op](a, b))
+else:
+    print("Invalid operation")
+ Assignment 4: Word Frequency Counter
+
+text = input("Enter a paragraph: ")
+words = text.split()
+
+freq = {}
+
+for word in words:
+    word = word.lower().strip(".,!?")
+    freq[word] = freq.get(word, 0) + 1
+
+# Sort by frequency
+sorted_freq = sorted(freq.items(), key=lambda x: x[1], reverse=True)
+
+print("Word Frequency:")
+for word, count in sorted_freq:
+    print(word, ":", count)
+
+ Assignment 5: Country Capitals
+
+capitals = {
+    "India": "New Delhi",
+    "USA": "Washington DC",
+    "Japan": "Tokyo"
+}
+
+country = input("Enter a country: ")
+
+if country in capitals:
+    print(f"The capital of {country} is {capitals[country]}")
+else:
+    capital = input(f"Capital of {country} not found. Enter capital: ")
+    capitals[country] = capital
+    print("Updated dictionary:", capitals)
+ Assignment 6: Set Operations on Friends
+
+my_friends = {"Rahul", "Priya", "Amit", "Sneha"}
+your_friends = {"Amit", "Sneha", "Karan", "Riya"}
+
+# Common friends
+print("Friends in both sets:", my_friends & your_friends)
+
+# Friends only you have
+print("Friends only I have:", my_friends - your_friends)
+
+# Friends only they have
+print("Friends only they have:", your_friends - my_friends)
+
+ Assignment 7: Menu System with Dictionary
+
+items = []
+
+def add_item():
+    item = input("Enter item to add: ")
+    items.append(item)
+    print("Item added!")
+
+def view_items():
+    print("Items:", items)
+
+def exit_program():
+    print("Exiting...")
+    exit()
+
+menu = {
+    1: add_item,
+    2: view_items,
+    3: exit_program
+}
+
+while True:
+    print("\nMenu:")
+    print("1 → Add Item")
+    print("2 → View Items")
+    print("3 → Exit")
+    
+    choice = int(input("Enter choice: "))
+    
+    if choice in menu:
+        menu[choice]()
+    else:
+        print("Invalid choice!")
+
