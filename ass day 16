@@ -1,0 +1,255 @@
+ Assignment 1: Age Validator in Class
+
+Requirement:
+
+Create Person class with set_age(age) method.
+
+Raise ValueError if age < 0 or age > 130.
+
+Catch exception when setting age.
+
+Solution:
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+        self.age = None
+
+    def set_age(self, age):
+        if age < 0 or age > 130:
+            raise ValueError("Age must be between 0 and 130.")
+        self.age = age
+
+# Main program
+try:
+    p = Person("Alice")
+    p.set_age(150)  # Invalid age
+except ValueError as e:
+    print("Error:", e)
+
+ Assignment 2: Bank Account Withdrawal
+
+Requirement:
+
+Class BankAccount with deposit() and withdraw() methods.
+
+Raise ValueError if withdrawal > balance.
+
+Solution:
+
+class BankAccount:
+    def __init__(self, balance=0):
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            raise ValueError("Insufficient funds.")
+        self.balance -= amount
+
+# Main program
+account = BankAccount(1000)
+try:
+    account.withdraw(1500)
+except ValueError as e:
+    print("Error:", e)
+
+Assignment 3: Student Grade Input
+
+Requirement:
+
+Class Student takes {"subject": marks} dictionary.
+
+Raise exception if marks not in 0–100.
+
+Solution:
+
+class Student:
+    def __init__(self, name, marks):
+        for subject, score in marks.items():
+            if score < 0 or score > 100:
+                raise ValueError(f"Invalid marks for {subject}: {score}")
+        self.name = name
+        self.marks = marks
+
+# Main program
+try:
+    s = Student("John", {"Math": 95, "Science": 105})  # Invalid
+except ValueError as e:
+    print("Error:", e)
+
+ Assignment 4: Custom Exception Class
+
+Requirement:
+
+Custom exception InsufficientBalanceError.
+
+Use in BankAccount if balance < ₹100.
+
+Solution:
+
+class InsufficientBalanceError(Exception):
+    pass
+
+class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def check_balance(self):
+        if self.balance < 100:
+            raise InsufficientBalanceError("Balance below ₹100. Cannot proceed.")
+
+# Main program
+try:
+    acc = BankAccount(50)
+    acc.check_balance()
+except InsufficientBalanceError as e:
+    print("Error:", e)
+
+ Assignment 5: File Reader Class with Exception Handling
+
+Requirement:
+
+Class FileReader with read_file(filename).
+
+Raise FileNotFoundError if file doesn’t exist.
+
+Solution:
+
+class FileReader:
+    def read_file(self, filename):
+        try:
+            with open(filename, "r") as f:
+                return f.read()
+        except FileNotFoundError:
+            print("Error: File not found.")
+
+# Main program
+reader = FileReader()
+reader.read_file("non_existing_file.txt")
+
+ Assignment 6: Password Validator
+
+Requirement:
+
+User class with set_password(password) method.
+
+Raise ValueError if password < 8 chars or no digit.
+
+Solution:
+
+class User:
+    def set_password(self, password):
+        if len(password) < 8 or not any(char.isdigit() for char in password):
+            raise ValueError("Password must be at least 8 chars and contain a number.")
+        self.password = password
+
+# Main program
+try:
+    u = User()
+    u.set_password("abcde")  # Invalid
+except ValueError as e:
+    print("Error:", e)
+
+ Assignment 7: Temperature Converter with Validation
+
+Requirement:
+
+Class Temperature takes Celsius.
+
+Raise ValueError if < -273.15.
+
+Solution:
+
+class Temperature:
+    def __init__(self, celsius):
+        if celsius < -273.15:
+            raise ValueError("Temperature cannot be below absolute zero (-273.15°C).")
+        self.celsius = celsius
+
+# Main program
+try:
+    t = Temperature(-300)
+except ValueError as e:
+    print("Error:", e)
+
+ Assignment 8: Shopping Cart Quantity Check
+
+Requirement:
+
+ShoppingCart class with stock limit.
+
+Raise exception if added quantity > stock.
+
+Solution:
+
+class ShoppingCart:
+    def __init__(self, stock):
+        self.stock = stock
+
+    def add_item(self, quantity):
+        if quantity > self.stock:
+            raise ValueError("Cannot add more than available stock.")
+        self.stock -= quantity
+        print("Item added successfully!")
+
+# Main program
+try:
+    cart = ShoppingCart(10)
+    cart.add_item(15)  # Exceeds stock
+except ValueError as e:
+    print("Error:", e)
+
+ Assignment 9: Exam Hall Allocation
+
+Requirement:
+
+ExamHall class with max capacity.
+
+Raise exception if allocated students > capacity.
+
+Solution:
+
+class ExamHall:
+    def __init__(self, max_capacity):
+        self.max_capacity = max_capacity
+
+    def allocate_students(self, num_students):
+        if num_students > self.max_capacity:
+            raise ValueError("Student count exceeds hall capacity.")
+        print("Allocation successful!")
+
+# Main program
+try:
+    hall = ExamHall(50)
+    hall.allocate_students(60)
+except ValueError as e:
+    print("Error:", e)
+
+ Assignment 10: Flight Booking Validation
+
+Requirement:
+
+FlightBooking with name, age.
+
+Raise custom exception if age < 0 or > 100.
+
+Solution:
+
+class InvalidAgeError(Exception):
+    pass
+
+class FlightBooking:
+    def __init__(self, name, age):
+        if age < 0 or age > 100:
+            raise InvalidAgeError("Invalid age for flight booking.")
+        self.name = name
+        self.age = age
+
+# Main program
+try:
+    fb = FlightBooking("Raj", 150)
+except InvalidAgeError as e:
+    print("Error:", e)
